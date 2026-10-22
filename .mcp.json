@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "esq-matching-engine": {
+      "type": "http",
+      "url": "https://match.esqcopilot.com/mcp/c/eyJrIjoiY29ubmVjdG9yIiwiaSI6ImNvbl9jbGF1ZGVfbWFpbiIsInAiOiJjbGF1ZGUifQ.4fdad38f28d26f97a252cd6a19172e12"
+    }
+  }
+}
