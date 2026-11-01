@@ -14,7 +14,26 @@ ESQ Matching Engine matches people with licensed attorneys by relevance; the use
 - **update_matching_preferences**, **submit_matching_feedback**
 
 ## Install
-Remote MCP server: `https://match.esqcopilot.com/mcp` (no sign-in). This plugin adds the server and a short skill (`find-a-lawyer`) that tells Claude how to use it.
+
+**Claude Code** (version 2.1.275 or later), one step:
+
+```
+/plugin install esq-matching-engine --marketplace sustany/esq-matching-engine
+```
+
+Older Claude Code versions, two steps:
+
+```
+/plugin marketplace add sustany/esq-matching-engine
+/plugin install esq-matching-engine@esq-copilot
+```
+
+**Claude on the web, desktop or mobile:** Settings, Connectors, Add custom connector. Name: ESQ Matching Engine. Remote MCP server URL: `https://match.esqcopilot.com/mcp`. No sign-in.
+
+The plugin adds the remote MCP server `https://match.esqcopilot.com/mcp` (no sign-in) and a short skill (`find-a-lawyer`) that tells Claude how to use it.
+
+## Introductions today
+`request_attorney_introduction` records the request and the details the person approved, and returns a reference number. While introduction delivery is switched off, the request is recorded only and is not sent to the lawyer; the tool says so in its answer, and Claude must tell the person.
 
 ## Examples
 - "My landlord gave me a 3-day notice in Santa Ana, California. Find me a lawyer; my budget is small."

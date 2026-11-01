@@ -1,0 +1,20 @@
+{
+  "name": "esq-copilot",
+  "owner": {
+    "name": "Decentralized Publishing LLC",
+    "email": "notices@esqcopilot.com"
+  },
+  "metadata": {
+    "description": "ESQ CoPilot plugins for Claude: find, compare and contact licensed U.S. lawyers."
+  },
+  "plugins": [
+    {
+      "name": "esq-matching-engine",
+      "source": "./",
+      "description": "Find, compare and contact licensed U.S. lawyers. Matches people with licensed attorneys by relevance using official licensing records; the user chooses whom to contact. Not legal advice.",
+      "version": "1.2.1",
+      "category": "productivity",
+      "homepage": "https://esqcopilot.com"
+    }
+  ]
+}
