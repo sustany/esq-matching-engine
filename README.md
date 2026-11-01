@@ -39,6 +39,11 @@ The plugin adds the remote MCP server `https://match.esqcopilot.com/mcp` (no sig
 - "My landlord gave me a 3-day notice in Santa Ana, California. Find me a lawyer; my budget is small."
 - "Compare the first three lawyers you found."
 - "What would a landlord-tenant lawyer in California cost?"
+- "I was fired after complaining about unpaid overtime in Los Angeles. Who can help?"
+- "Introduce me to the second lawyer." (Claude shows the lawyer and the exact details first, and sends nothing without your yes.)
+
+## What this plugin sends and runs
+Nothing runs on your computer. The plugin connects Claude to one remote server, `https://match.esqcopilot.com/mcp`, operated by Decentralized Publishing LLC. Claude sends it the search details needed for a match (state, city or county, type of matter, timing, budget, language). For an introduction, it sends only the details you approve. It never reads your chat history, files or memory.
 
 ## Privacy and terms
 Privacy policy: https://esqcopilot.com/privacy.html. Terms: https://esqcopilot.com/terms.html. Searches keep structured criteria only, never the person's own description. Introduction details are limited to what the person approves, encrypted, and deleted after 180 days.
