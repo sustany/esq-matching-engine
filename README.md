@@ -5,12 +5,15 @@ Find, compare and contact licensed U.S. lawyers from Claude.
 ESQ Matching Engine matches people with licensed attorneys by relevance; the user chooses whom to contact. License and office details come from official state licensing records. Practice areas are what lawyers listed themselves. Fees and availability appear only where a lawyer has shared them; everything else is labeled unknown. ESQ Matching Engine does not give legal advice, does not rank lawyers by payment, and a match or introduction does not create an attorney-client relationship.
 
 ## What it does
+- **start_from_directory_profile**: start with the exact lawyer whose ESQ CoPilot directory profile you are viewing (by profile address or id; never a similar name)
+- **prepare_introduction**: an editable message to one lawyer showing exactly what is shared; nothing is sent
 - **get_matching_requirements**: the questions needed for a good match
 - **find_attorneys**: up to five licensed lawyers with reasons, sources and dates, or an honest no-match with legal aid links
 - **compare_attorneys**, **get_attorney_profile**: side-by-side facts and one lawyer's profile
 - **estimate_legal_cost**: fee information only where it has a real source; otherwise it says so
 - **check_attorney_availability**: availability a lawyer has reported; no calendar is connected
-- **request_attorney_introduction**, **get_referral_status**: an introduction to one lawyer, only after the user agrees to exactly what is shared
+- **request_attorney_introduction**, **get_introduction_status** (older name **get_referral_status**): an introduction to one lawyer, only after the user agrees to exactly what is shared
+- **confirm_introduction**, **cancel_introduction**: confirm a pending introduction after a fresh yes, or cancel one and delete the shared details
 - **update_matching_preferences**, **submit_matching_feedback**
 
 ## Install
