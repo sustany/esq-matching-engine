@@ -5,14 +5,14 @@
     "email": "notices@esqcopilot.com"
   },
   "metadata": {
-    "description": "ESQ CoPilot plugins for Claude: find, compare and contact licensed U.S. lawyers."
+    "description": "ESQ CoPilot plugins for Claude: search, compare and contact licensed U.S. lawyers."
   },
   "plugins": [
     {
       "name": "esq-matching-engine",
       "source": "./",
-      "description": "Find, compare and contact licensed U.S. lawyers. Matches people with licensed attorneys by relevance using official licensing records; the user chooses whom to contact. Not legal advice.",
-      "version": "1.3.0",
+      "description": "Search, filter, compare and contact licensed U.S. lawyers from official licensing records. A listing service, not a lawyer referral service; the person chooses whom to contact. Not legal advice.",
+      "version": "3.0.0",
       "category": "productivity",
       "homepage": "https://esqcopilot.com"
     }

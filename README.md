@@ -1,21 +1,19 @@
 # ESQ Matching Engine
 
-Find, compare and contact licensed U.S. lawyers from Claude.
+Search, compare and contact licensed U.S. lawyers from Claude.
 
-ESQ Matching Engine matches people with licensed attorneys by relevance; the user chooses whom to contact. License and office details come from official state licensing records. Practice areas are what lawyers listed themselves. Fees and availability appear only where a lawyer has shared them; everything else is labeled unknown. ESQ Matching Engine does not give legal advice, does not rank lawyers by payment, and a match or introduction does not create an attorney-client relationship.
+ESQ Matching Engine is a listing service, not a lawyer referral service. No lawyer pays for placement or ranking of any kind, and the person chooses whom to contact. License and office details come from official state licensing records. Practice areas are what lawyers listed themselves. Fees and availability appear only where a lawyer has shared them; everything else is labeled unknown. ESQ Matching Engine does not give legal advice, and a listing or a message does not create an attorney-client relationship.
 
 ## What it does
-- **start_from_directory_profile**: start with the exact lawyer whose ESQ CoPilot directory profile you are viewing (by profile address or id; never a similar name)
-- **prepare_introduction**: an editable message to one lawyer showing exactly what is shared; nothing is sent
-- **get_matching_requirements**: the questions needed for a good match
-- **find_attorneys**: up to five licensed lawyers with reasons, sources and dates, or an honest no-match with legal aid links
+- **get_search_filters**: the few filters still needed before a search
+- **search_attorneys**: licensed lawyers that fit the person's filters, in the order the person picks (nearest office by default; also last name, years licensed, free first consultation, published fees or reported availability), with no scores. Each answer starts with a plain summary, gives shared notes once and each lawyer's own facts with sources and dates, and pages through the full list; or an honest empty result with legal aid links
+- **start_from_directory_profile**: start from one directory profile and keep that lawyer visible
 - **compare_attorneys**, **get_attorney_profile**: side-by-side facts and one lawyer's profile
 - **estimate_legal_cost**: fee information only where it has a real source; otherwise it says so
 - **check_attorney_availability**: availability a lawyer has reported; no calendar is connected
-- **request_attorney_introduction**, **get_introduction_status** (older name **get_referral_status**): an introduction to one lawyer, only after the user agrees to exactly what is shared
-- **confirm_introduction**, **cancel_introduction**: confirm a pending introduction after a fresh yes, or cancel one and delete the shared details
-- **update_matching_preferences**, **submit_matching_feedback**
-
+- **preview_client_message**, **send_client_message**, **get_contact_request_status**, **cancel_contact_request**: the person's own message to one lawyer they picked, only after they approve its exact text (optional; the firm's phone and website are always shown too)
+- **update_listing_criteria**, **submit_listing_feedback**, **report_listing_error** (report a wrong or outdated detail; it never changes the order)
+- Older tool names (find_attorneys, request_attorney_introduction and others) keep working until 2026-12-15.
 ## Install
 
 **Claude Code** (version 2.1.275 or later), one step:
@@ -35,21 +33,21 @@ Older Claude Code versions, two steps:
 
 The plugin adds the remote MCP server `https://match.esqcopilot.com/mcp` (no sign-in) and a short skill (`find-a-lawyer`) that tells Claude how to use it.
 
-## Introductions today
-`request_attorney_introduction` records the request and the details the person approved, and returns a reference number. While introduction delivery is switched off, the request is recorded only and is not sent to the lawyer; the tool says so in its answer, and Claude must tell the person.
+## Messages today
+`send_client_message` passes along only the message and details the person approved, to the email on the lawyer's licensing record, and returns a reference number. The lawyer replies to the person directly. If sending is switched off, the message is recorded only; the tool says which in its answer, and Claude must tell the person.
 
 ## Examples
-- "My landlord gave me a 3-day notice in Santa Ana, California. Find me a lawyer; my budget is small."
-- "Compare the first three lawyers you found."
+- "My landlord gave me a 3-day notice in Santa Ana, California. Show me licensed tenant lawyers there; my budget is small."
+- "Compare the first three listings."
 - "What would a landlord-tenant lawyer in California cost?"
 - "I was fired after complaining about unpaid overtime in Los Angeles. Who can help?"
-- "Introduce me to the second lawyer." (Claude shows the lawyer and the exact details first, and sends nothing without your yes.)
+- "Send my message to the second lawyer." (Claude shows the lawyer and the exact text first, and sends nothing without your yes.)
 
 ## What this plugin sends and runs
-Nothing runs on your computer. The plugin connects Claude to one remote server, `https://match.esqcopilot.com/mcp`, operated by Decentralized Publishing LLC. Claude sends it the search details needed for a match (state, city or county, type of matter, timing, budget, language). For an introduction, it sends only the details you approve. It never reads your chat history, files or memory.
+Nothing runs on your computer. The plugin connects Claude to one remote server, `https://match.esqcopilot.com/mcp`, operated by Decentralized Publishing LLC. Claude sends it the search filters (state, city or county, type of matter, timing, budget, language). For a message, it sends only the details you approve. It never reads your chat history, files or memory.
 
 ## Privacy and terms
-Privacy policy: https://esqcopilot.com/privacy.html. Terms: https://esqcopilot.com/terms.html. Searches keep structured criteria only, never the person's own description. Introduction details are limited to what the person approves, encrypted, and deleted after 180 days.
+Privacy policy: https://esqcopilot.com/privacy.html. Terms: https://esqcopilot.com/terms.html. Searches keep structured criteria only, never the person's own description. Message details are limited to what the person approves, encrypted, and deleted after 180 days.
 
 ## Support
 https://esqcopilot.com/contact.html, notices@esqcopilot.com. Operated by Decentralized Publishing LLC, 92 Corporate Park, Ste C #1083, Irvine, CA 92606.
