@@ -11,8 +11,8 @@
     {
       "name": "esq-matching-engine",
       "source": "./",
-      "description": "Search, filter, compare and contact licensed U.S. lawyers from official licensing records. A listing service, not a lawyer referral service; the person chooses whom to contact. Not legal advice.",
-      "version": "3.0.0",
+      "description": "Search, filter, compare and contact licensed U.S. lawyers from official licensing records, organize your notes before you call, and check where your messages stand. A listing service, not a lawyer referral service; the person chooses whom to contact. Not legal advice.",
+      "version": "4.0.0",
       "category": "productivity",
       "homepage": "https://esqcopilot.com"
     }
