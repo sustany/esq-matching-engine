@@ -45,7 +45,7 @@ The plugin adds the remote MCP server `https://match.esqcopilot.com/mcp` (no sig
 ## Examples
 - "My landlord gave me a 3-day notice in Santa Ana, California. Show me licensed tenant lawyers there; my budget is small."
 - "Compare the first three listings."
-- "What would a landlord-tenant lawyer in California cost?"
+- "What does a landlord-tenant lawyer in California cost?"
 - "I was fired after complaining about unpaid overtime in Los Angeles. Who can help?"
 - "Help me organize my notes about unpaid overtime before I call a lawyer."
 - "I got a DUI in Columbus, Ohio last night. Who can represent me?"

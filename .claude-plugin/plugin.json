@@ -1,7 +1,7 @@
 {
   "name": "esq-matching-engine",
   "displayName": "ESQ Matching Engine",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Search, filter, compare and contact licensed U.S. lawyers from official licensing records, organize your own notes before you call, and check where your messages stand. A listing service, not a lawyer referral service: no lawyer pays for placement or ranking of any kind, and the person chooses whom to contact. Shows the source and date of every fact and labels anything unknown. Not legal advice.",
   "author": {
     "name": "Decentralized Publishing LLC",
